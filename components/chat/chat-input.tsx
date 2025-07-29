@@ -18,6 +18,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { useModal } from "@/hooks/use-modal-store";
 import { EmojiPicker } from "@/components/emoji-picker";
+import { Button } from "@/components/ui/button";
 
 interface ChatInputProps {
   apiUrl: string;
@@ -84,12 +85,23 @@ export function ChatInput({ apiUrl, query, name, type }: ChatInputProps) {
                     className="px-14 py-6 bg-zinc-200/90 dark:bg-zinc-700/75 border-none border-0 focus-visible:ring-0 focus-visible:ring-offset-0 text-zinc-600 dark:text-zinc-200"
                     {...field}
                   />
-                  <div className="absolute top-7 right-8">
+                  <div className="absolute top-7 right-8 flex items-center gap-2">
                     <EmojiPicker
                       onChange={(emoji: string) =>
                         field.onChange(`${field.value} ${emoji}`)
                       }
                     />
+                    <Button
+                      type="submit"
+                      size="icon"
+                      variant="primary"
+                      disabled={isLoading || !field.value.trim()}
+                      className="ml-2"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-7.5-15-7.5v6.75l10.5 0-10.5 0v6.75z" />
+                      </svg>
+                    </Button>
                   </div>
                 </div>
               </FormControl>
