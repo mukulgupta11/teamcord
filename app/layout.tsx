@@ -26,9 +26,6 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en" suppressHydrationWarning>
-        <head>
-          <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@0..1,0..1&display=swap" rel="stylesheet" />
-        </head>
         <body
           className={cn(inter.className, "bg-white dark:bg-[#313338]")}
         >
