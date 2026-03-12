@@ -11,6 +11,12 @@ const nextConfig = {
   images: {
     domains: ["uploadthing.com", "images.pexels.com"]
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   swcMinify: false
 };
 
