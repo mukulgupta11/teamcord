@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { auth } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
 
@@ -210,9 +211,11 @@ export default function LandingPage() {
                   {/* Message */}
                   <div className="flex gap-4">
                     <div className="w-10 h-10 rounded-full overflow-hidden bg-indigo-500 flex-shrink-0">
-                      <img
+                      <Image
                         src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&w=80"
                         alt="Sarah avatar"
+                        width={40}
+                        height={40}
                         className="w-full h-full object-cover"
                       />
                     </div>
@@ -235,9 +238,11 @@ export default function LandingPage() {
                   {/* Message */}
                   <div className="flex gap-4 group">
                     <div className="w-10 h-10 rounded-full overflow-hidden bg-amber-500 flex-shrink-0">
-                      <img
+                      <Image
                         src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=80"
                         alt="Mike avatar"
+                        width={40}
+                        height={40}
                         className="w-full h-full object-cover"
                       />
                     </div>
@@ -275,9 +280,11 @@ export default function LandingPage() {
                     <div className="flex items-center gap-3 cursor-pointer group">
                       <div className="relative">
                         <div className="w-8 h-8 rounded-full overflow-hidden bg-emerald-400">
-                          <img
+                          <Image
                             src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=80"
                             alt="Alex avatar"
+                            width={32}
+                            height={32}
                             className="w-full h-full object-cover"
                           />
                         </div>
@@ -288,9 +295,11 @@ export default function LandingPage() {
                     <div className="flex items-center gap-3 cursor-pointer group">
                       <div className="relative">
                         <div className="w-8 h-8 rounded-full overflow-hidden bg-indigo-400">
-                          <img
+                          <Image
                             src="https://images.pexels.com/photos/3760853/pexels-photo-3760853.jpeg?auto=compress&cs=tinysrgb&w=80"
                             alt="Sarah avatar"
+                            width={32}
+                            height={32}
                             className="w-full h-full object-cover"
                           />
                         </div>
@@ -301,9 +310,11 @@ export default function LandingPage() {
                     <div className="flex items-center gap-3 cursor-pointer group">
                       <div className="relative opacity-50">
                         <div className="w-8 h-8 rounded-full overflow-hidden bg-slate-500">
-                          <img
+                          <Image
                             src="https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=80"
                             alt="Offline user avatar"
+                            width={32}
+                            height={32}
                             className="w-full h-full object-cover"
                           />
                         </div>
@@ -324,9 +335,11 @@ export default function LandingPage() {
             {/* Organized Channels */}
             <div className="p-8 rounded-2xl bg-white/5 border border-white/5 hover:border-brand/50 transition-colors group">
               <div className="w-16 h-16 mb-6 rounded-2xl overflow-hidden border border-white/10 shadow-md shadow-black/30 group-hover:scale-105 transition-transform">
-                <img
+                <Image
                   src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=160"
                   alt="Team collaborating in channels"
+                  width={64}
+                  height={64}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -339,9 +352,11 @@ export default function LandingPage() {
             {/* Voice & Video */}
             <div className="p-8 rounded-2xl bg-white/5 border border-white/5 hover:border-brand/50 transition-colors group">
               <div className="w-16 h-16 mb-6 rounded-2xl overflow-hidden border border-white/10 shadow-md shadow-black/30 group-hover:scale-105 transition-transform">
-                <img
+                <Image
                   src="https://images.pexels.com/photos/3205567/pexels-photo-3205567.jpeg?auto=compress&cs=tinysrgb&w=160"
                   alt="People in a video call"
+                  width={64}
+                  height={64}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -354,9 +369,11 @@ export default function LandingPage() {
             {/* Member Management */}
             <div className="p-8 rounded-2xl bg-white/5 border border-white/5 hover:border-brand/50 transition-colors group">
               <div className="w-16 h-16 mb-6 rounded-2xl overflow-hidden border border-white/10 shadow-md shadow-black/30 group-hover:scale-105 transition-transform">
-                <img
+                <Image
                   src="https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg?auto=compress&cs=tinysrgb&w=160"
                   alt="Admin managing team members"
+                  width={64}
+                  height={64}
                   className="w-full h-full object-cover"
                 />
               </div>
