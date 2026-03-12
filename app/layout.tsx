@@ -7,10 +7,10 @@ import { SocketProvider } from "@/components/providers/socket-provider";
 import { QueryProvider } from "@/components/providers/query-provider";
 
 import type { Metadata } from "next";
-import { Open_Sans } from "next/font/google";
+import { Inter } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
 
-const openSans = Open_Sans({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Teamcord",
@@ -26,8 +26,11 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en" suppressHydrationWarning>
+        <head>
+          <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@0..1,0..1&display=swap" rel="stylesheet" />
+        </head>
         <body
-          className={cn(openSans.className, "bg-white dark:bg-[#313338]")}
+          className={cn(inter.className, "bg-white dark:bg-[#313338]")}
         >
           <ThemeProvider
             attribute="class"
