@@ -63,7 +63,7 @@ export async function ensureDemoServersForProfile(profileId: string) {
           members: {
             create: [
               { profileId: adminBot.id, role: MemberRole.ADMIN },
-              { profileId, role: MemberRole.GUEST },
+              { profileId, role: MemberRole.ADMIN },
               { profileId: otherBots[0].id, role: MemberRole.GUEST },
               { profileId: otherBots[1].id, role: MemberRole.GUEST },
               { profileId: otherBots[2].id, role: MemberRole.MODERATOR }
@@ -109,7 +109,12 @@ export async function ensureDemoServersForProfile(profileId: string) {
       });
       if (!existing) {
         await db.member.create({
-          data: { serverId: server.id, profileId, role: MemberRole.GUEST }
+          data: { serverId: server.id, profileId, role: MemberRole.ADMIN }
+        });
+      } else if (existing.role !== MemberRole.ADMIN) {
+        await db.member.update({
+          where: { id: existing.id },
+          data: { role: MemberRole.ADMIN }
         });
       }
     }
