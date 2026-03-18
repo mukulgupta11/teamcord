@@ -9,7 +9,7 @@ const nextConfig = {
     return config;
   },
   images: {
-    domains: ["uploadthing.com", "images.pexels.com"]
+    domains: ["uploadthing.com", "images.pexels.com", "placehold.co"]
   },
   swcMinify: false,
   eslint: {
